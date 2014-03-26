@@ -26,11 +26,13 @@ add_library(rtlsdr_shared SHARED
     tuner_fc0012.c
     tuner_fc0013.c
     tuner_fc2580.c
+    tuner_max2112.c
     tuner_r82xx.c
 )
 
 target_link_libraries(rtlsdr_shared
     ${LIBUSB_LIBRARIES}
+    m
 )
 
 set_target_properties(rtlsdr_shared PROPERTIES DEFINE_SYMBOL "rtlsdr_EXPORTS")
@@ -44,6 +46,7 @@ add_library(rtlsdr_static STATIC
     tuner_fc0012.c
     tuner_fc0013.c
     tuner_fc2580.c
+    tuner_max2112.c
     tuner_r82xx.c
 )
 
